@@ -1,0 +1,10 @@
+
+
+
+
+v. 0.0.1.0
+- Hide selection in radio list.
+	* This allows the table view to show the current playing station properly.
+
+- Limited the size of the button section and the radio section.
+	* So they don't become too small to be usable. 

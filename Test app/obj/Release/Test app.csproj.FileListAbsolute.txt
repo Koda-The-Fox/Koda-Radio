@@ -1,0 +1,21 @@
+C:\Users\jordy.vanvenrooij\source\repos\Test app\Test app\bin\Release\Test app.exe.config
+C:\Users\jordy.vanvenrooij\source\repos\Test app\Test app\bin\Release\Test app.exe
+C:\Users\jordy.vanvenrooij\source\repos\Test app\Test app\bin\Release\Test app.pdb
+C:\Users\jordy.vanvenrooij\source\repos\Test app\Test app\bin\Release\Newtonsoft.Json.dll
+C:\Users\jordy.vanvenrooij\source\repos\Test app\Test app\bin\Release\Newtonsoft.Json.xml
+C:\Users\jordy.vanvenrooij\source\repos\Test app\Test app\bin\Release\Interop.WMPLib.dll
+C:\Users\jordy.vanvenrooij\source\repos\Test app\Test app\bin\Release\AxInterop.WMPLib.dll
+C:\Users\jordy.vanvenrooij\source\repos\Test app\Test app\obj\Release\Test app.csproj.AssemblyReference.cache
+C:\Users\jordy.vanvenrooij\source\repos\Test app\Test app\obj\Release\Test app.csproj.SuggestedBindingRedirects.cache
+C:\Users\jordy.vanvenrooij\source\repos\Test app\Test app\obj\Release\Interop.WMPLib.dll
+C:\Users\jordy.vanvenrooij\source\repos\Test app\Test app\obj\Release\AxInterop.WMPLib.dll
+C:\Users\jordy.vanvenrooij\source\repos\Test app\Test app\obj\Release\Test app.csproj.ResolveComReference.cache
+C:\Users\jordy.vanvenrooij\source\repos\Test app\Test app\obj\Release\Test_app.Form1.resources
+C:\Users\jordy.vanvenrooij\source\repos\Test app\Test app\obj\Release\Test_app.GroupAddEdit.resources
+C:\Users\jordy.vanvenrooij\source\repos\Test app\Test app\obj\Release\Test_app.Properties.Resources.resources
+C:\Users\jordy.vanvenrooij\source\repos\Test app\Test app\obj\Release\Test_app.RadioAddEdit.resources
+C:\Users\jordy.vanvenrooij\source\repos\Test app\Test app\obj\Release\Test app.csproj.GenerateResource.cache
+C:\Users\jordy.vanvenrooij\source\repos\Test app\Test app\obj\Release\Test app.csproj.CoreCompileInputs.cache
+C:\Users\jordy.vanvenrooij\source\repos\Test app\Test app\obj\Release\Test app.csproj.CopyComplete
+C:\Users\jordy.vanvenrooij\source\repos\Test app\Test app\obj\Release\Test app.exe
+C:\Users\jordy.vanvenrooij\source\repos\Test app\Test app\obj\Release\Test app.pdb

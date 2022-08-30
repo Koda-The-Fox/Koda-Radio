@@ -1,0 +1,181 @@
+{
+  "Classy Radio": {
+    "Type": "Station",
+    "URL": "https://gooischstream.hofstreaming.nl/proxy/gooisch_main?mp=/stream"
+  },
+  "Radio Veronica": {
+    "Type": "Group",
+    "Radio Veronica": {
+      "Type": "Station",
+      "URL": "http://playerservices.streamtheworld.com/api/livestream-redirect/VERONICA.mp3"
+    },
+    "Alternative": {
+      "Type": "Station",
+      "URL": "http://playerservices.streamtheworld.com/api/livestream-redirect/SRGSTR12.mp3"
+    },
+    "Veronica Non-Stop": {
+      "Type": "Station",
+      "URL": "http://playerservices.streamtheworld.com/api/livestream-redirect/SRGSTR09.mp3"
+    },
+    "Veronica Rock Radio": {
+      "Type": "Station",
+      "URL": "http://playerservices.streamtheworld.com/api/livestream-redirect/SRGSTR11.mp3"
+    },
+    "Veronica Top 1000 Allertijden": {
+      "Type": "Station",
+      "URL": "http://playerservices.streamtheworld.com/api/livestream-redirect/SRGSTR10.mp3"
+    }
+  },
+  "NPO": {
+    "Type": "Group",
+    "NPO Radio 1": {
+      "Type": "Station",
+      "URL": "https://icecast.omroep.nl/radio1-bb-mp3"
+    },
+    "NPO Radio 2": {
+      "Type": "Station",
+      "URL": "https://icecast.omroep.nl/radio2-bb-mp3"
+    },
+    "NPO Radio 2 Soul & Jazz": {
+      "Type": "Station",
+      "URL": "https://icecast.omroep.nl/radio6-bb-mp3"
+    },
+    "NPO Sterren.nl": {
+      "Type": "Station",
+      "URL": "https://icecast.omroep.nl/radio2-sterrennl-mp3"
+    },
+    "NPO 3FM": {
+      "Type": "Station",
+      "URL": "https://icecast.omroep.nl/3fm-bb-mp3"
+    },
+    "NPO 3FM Alternative": {
+      "Type": "Station",
+      "URL": "https://icecast.omroep.nl/3fm-alternative-mp3"
+    },
+    "NPO 3FM KX Radio": {
+      "Type": "Station",
+      "URL": "https://icecast.omroep.nl/3fm-serioustalent-mp3"
+    },
+    "NPO Radio 4": {
+      "Type": "Station",
+      "URL": "https://icecast.omroep.nl/radio4-bb-mp3"
+    },
+    "NPO Radio 4 Concerten": {
+      "Type": "Station",
+      "URL": "https://icecast.omroep.nl/radio4-eigentijds-mp3"
+    },
+    "NPO Radio 5": {
+      "Type": "Station",
+      "URL": "https://icecast.omroep.nl/radio5-bb-mp3"
+    }
+  },
+  "538 (Talpa Radio)": {
+    "Type": "Group",
+    "538": {
+      "type": "station",
+      "URL": "http://25293.live.streamtheworld.com/RADIO538.mp3"
+    },
+    "538 Dance Dept.": {
+      "type": "station",
+      "URL": "http://playerservices.streamtheworld.com/api/livestream-redirect/TLPSTR01.mp3"
+    },
+    "538 Hitzone": {
+      "type": "station",
+      "URL": "http://playerservices.streamtheworld.com/api/livestream-redirect/TLPSTR11.mp3"
+    },
+    "538 Ibiza": {
+      "type": "station",
+      "URL": "http://playerservices.streamtheworld.com/api/livestream-redirect/TLPSTR19.mp3"
+    },
+    "538 Non-Stop": {
+      "type": "station",
+      "URL": "http://playerservices.streamtheworld.com/api/livestream-redirect/TLPSTR09.mp3"
+    },
+    "538 Party": {
+      "type": "station",
+      "URL": "http://playerservices.streamtheworld.com/api/livestream-redirect/TLPSTR16.mp3"
+    },
+    "Rewind": {
+      "type": "station",
+      "URL": "https://playerservices.streamtheworld.com/api/livestream-redirect/TLPSTR08.mp3"
+    },
+    "538 Top 50": {
+      "type": "station",
+      "URL": "http://playerservices.streamtheworld.com/api/livestream-redirect/TLPSTR13.mp3"
+    },
+    "538 Die Verrückte": {
+      "type": "station",
+      "URL": "https://playerservices.streamtheworld.com/api/livestream-redirect/TLPSTR21.mp3"
+    },
+    "538 Zomer": {
+      "type": "station",
+      "URL": "https://playerservices.streamtheworld.com/api/livestream-redirect/TLPSTR06.mp3"
+    }
+  },
+  "Arrow Bluesrock (Arrow Media Group - PAKO Media B.V.)": {
+    "Type": "Group",
+    "Arrow Bluesbox Radio - ABR)": {
+      "type": "station",
+      "URL": "https://stream.arrowcaz.nl/bluesboxonline"
+    },
+    "Arrow CAZ! (PAKO Media B.V.)": {
+      "type": "station",
+      "URL": "https://stream.arrowcaz.nl/caz128kmp3"
+    },
+    "Arrow Rock Radio (Arrow Media Group)": {
+      "type": "station",
+      "URL": "https://stream.arrowcaz.nl/arrowrockradio"
+    },
+    "Arrow Classic Rock (Media Management & Project BV, Noordwijk)": {
+      "type": "station",
+      "URL": "https://stream.player.arrow.nl/arrow"
+    }
+  },
+  "Sky Radio (Talpa Radio)": {
+	  "Type": "Group",
+	  "Sky Radio 101 FM":{
+		  "Type": "Station",
+		  "URL": "http://playerservices.streamtheworld.com/api/livestream-redirect/SKYRADIO.mp3"
+	  },
+	  "Sky Hits":{
+		  "Type": "Station",
+		  "URL": "http://playerservices.streamtheworld.com/api/livestream-redirect/SRGSTR01.mp3"
+	  },
+	  "Sky Hits van de Sint":{
+		  "Type": "Station",
+		  "URL": "https://playerservices.streamtheworld.com/api/livestream-redirect/SRGSTR28.mp3"
+	  },
+	  "Sky LoveSongs":{
+		  "Type": "Station",
+		  "URL": "http://playerservices.streamtheworld.com/api/livestream-redirect/SRGSTR03.mp3"
+	  },
+	  "Sky Non-Stop@Work":{
+		  "Type": "Station",
+		  "URL": "http://playerservices.streamtheworld.com/api/livestream-redirect/SRGSTR24.mp3"
+	  },
+	  "Sky for Men":{
+		  "Type": "Station",
+		  "URL": "https://playerservices.streamtheworld.com/api/livestream-redirect/SRGSTR28.mp3"
+	  },
+	  "Sky Smooth Hits":{
+		  "Type": "Station",
+		  "URL": "http://playerservices.streamtheworld.com/api/livestream-redirect/SRGSTR15.mp3"
+	  },
+	  "Sky 80's Hits":{
+		  "Type": "Station",
+		  "URL": "http://playerservices.streamtheworld.com/api/livestream-redirect/SRGSTR04.mp3"
+	  },
+	  "Sky 90's Hits":{
+		  "Type": "Station",
+		  "URL": "http://playerservices.streamtheworld.com/api/livestream-redirect/SRGSTR05.mp3"
+	  },
+	  "Sky Lounge":{
+		  "Type": "Station",
+		  "URL": "http://playerservices.streamtheworld.com/api/livestream-redirect/SRGSTR07.mp3"
+	  },
+	  "Sky Christmas":{
+		  "Type": "Station",
+		  "URL": "http://playerservices.streamtheworld.com/api/livestream-redirect/SRGSTR08.mp3"
+	  }
+  }
+}

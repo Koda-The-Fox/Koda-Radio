@@ -1,0 +1,24 @@
+C:\Users\jordy.vanvenrooij\source\repos\Test app\Test app\bin\Debug\Test app.exe.config
+C:\Users\jordy.vanvenrooij\source\repos\Test app\Test app\bin\Debug\Test app.exe.manifest
+C:\Users\jordy.vanvenrooij\source\repos\Test app\Test app\bin\Debug\Test app.application
+C:\Users\jordy.vanvenrooij\source\repos\Test app\Test app\bin\Debug\Test app.exe
+C:\Users\jordy.vanvenrooij\source\repos\Test app\Test app\bin\Debug\Test app.pdb
+C:\Users\jordy.vanvenrooij\source\repos\Test app\Test app\bin\Debug\Newtonsoft.Json.dll
+C:\Users\jordy.vanvenrooij\source\repos\Test app\Test app\bin\Debug\Newtonsoft.Json.xml
+C:\Users\jordy.vanvenrooij\source\repos\Test app\Test app\bin\Debug\Interop.WMPLib.dll
+C:\Users\jordy.vanvenrooij\source\repos\Test app\Test app\bin\Debug\AxInterop.WMPLib.dll
+C:\Users\jordy.vanvenrooij\source\repos\Test app\Test app\obj\Debug\Test app.csproj.SuggestedBindingRedirects.cache
+C:\Users\jordy.vanvenrooij\source\repos\Test app\Test app\obj\Debug\Interop.WMPLib.dll
+C:\Users\jordy.vanvenrooij\source\repos\Test app\Test app\obj\Debug\AxInterop.WMPLib.dll
+C:\Users\jordy.vanvenrooij\source\repos\Test app\Test app\obj\Debug\Test app.csproj.ResolveComReference.cache
+C:\Users\jordy.vanvenrooij\source\repos\Test app\Test app\obj\Debug\Test_app.MainWindow.resources
+C:\Users\jordy.vanvenrooij\source\repos\Test app\Test app\obj\Debug\Test_app.GroupAddEdit.resources
+C:\Users\jordy.vanvenrooij\source\repos\Test app\Test app\obj\Debug\Test_app.Properties.Resources.resources
+C:\Users\jordy.vanvenrooij\source\repos\Test app\Test app\obj\Debug\Test_app.RadioAddEdit.resources
+C:\Users\jordy.vanvenrooij\source\repos\Test app\Test app\obj\Debug\Test app.csproj.GenerateResource.cache
+C:\Users\jordy.vanvenrooij\source\repos\Test app\Test app\obj\Debug\Test app.csproj.CoreCompileInputs.cache
+C:\Users\jordy.vanvenrooij\source\repos\Test app\Test app\obj\Debug\Test app.exe.manifest
+C:\Users\jordy.vanvenrooij\source\repos\Test app\Test app\obj\Debug\Test app.application
+C:\Users\jordy.vanvenrooij\source\repos\Test app\Test app\obj\Debug\Test app.csproj.CopyComplete
+C:\Users\jordy.vanvenrooij\source\repos\Test app\Test app\obj\Debug\Test app.exe
+C:\Users\jordy.vanvenrooij\source\repos\Test app\Test app\obj\Debug\Test app.pdb
