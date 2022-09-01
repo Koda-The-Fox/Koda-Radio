@@ -13,6 +13,7 @@ using System.Windows.Forms;
 using Koda_Radio.model;
 using Koda_Radio.util;
 using Koda_radio;
+using System.Net;
 
 namespace Koda_Radio
 {
@@ -26,6 +27,48 @@ namespace Koda_Radio
             InitializeComponent();
             axWindowsMediaPlayer1.uiMode = "none";
             axWindowsMediaPlayer1.settings.volume = (int)numericUpDown1.Value;
+
+
+            #region Test Track viewer
+
+            string station = "radio-veronica-top-1000-allertijden";
+
+            string query = "%7B%0A%20%20getStations(profile%3A%20%22radio-brand-web%22%2C%20slug%3A%20%22stations-radio-veronica%22)%20%7B%0A%20%20%20%20items%20%7B%0A%20%20%20%20%20%20title%0A%20%20%20%20%20%20slug%0A%20%20%20%20%20%20playouts(profile%3A%20%22%22%2C%20limit%3A%201)%20%7B%0A%20%20%20%20%20%20%20%20broadcastDate%0A%20%20%20%20%20%20%20%20track%20%7B%0A%20%20%20%20%20%20%20%20%20%20id%0A%20%20%20%20%20%20%20%20%20%20title%0A%20%20%20%20%20%20%20%20%20%20artistName%0A%20%20%20%20%20%20%20%20%20%20isrc%0A%20%20%20%20%20%20%20%20%20%20images%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20type%0A%20%20%20%20%20%20%20%20%20%20%20%20uri%0A%20%20%20%20%20%20%20%20%20%20%20%20__typename%0A%20%20%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20%20%20__typename%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20__typename%0A%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20__typename%0A%20%20%20%20%7D%0A%20%20%20%20__typename%0A%20%20%7D%0A%7D&variables=%7B%7D";
+            string query2 = "{ getStations(profile: \"radio - brand - web\", slug: \"stations - radio - veronica\") { items { title slug playouts(profile: \"\", limit: 1) { broadcastDate track { id title artistName isrc images { type uri __typename } __typename } __typename } __typename } __typename } }";
+            string query3 = "{ getStation(profile: \"radio-brand-web\" slug: \"radio-veronica-top-1000-allertijden\") { title playouts(profile: \"\", limit: 10) { broadcastDate track { id title artistName isrc images { type uri __typename } __typename } __typename } __typename } }";
+            string query4 = $"{{ getStation(profile: \"radio-brand-web\" slug: \"{station}\") {{ title playouts(profile: \"\", limit: 5) {{ broadcastDate track {{ id title artistName isrc images {{ type uri __typename }} __typename }} __typename }} __typename }} }}";
+            var urlAddress = $@"https://graph.talparad.io/?query={query4}";
+
+            HttpWebRequest request = (HttpWebRequest)WebRequest.Create(urlAddress);
+
+            //request.Headers.Add(HttpRequestHeader.Accept, "application/json")
+            request.Headers.Add(HttpRequestHeader.AcceptLanguage, "en-US,en;q=0.5");
+            //request.Headers.Add(HttpRequestHeader.ContentType, "application/json");
+            request.Headers.Add("x-api-key", "da2-vak2kxayzzh7lgexfqvefckdby");
+            request.Headers.Add("Sec-Fetch-Dest", "empty");
+            request.Headers.Add("Sec-Fetch-Mode", "cors");
+            request.Headers.Add("Sec-Fetch-Site", "cross-site");
+
+            request.Accept = "*/*";
+            request.ContentType = "application/json";
+            request.Method = "GET";
+            request.Referer = "https://www.radioveronica.nl/"; // Required 
+            HttpWebResponse response = (HttpWebResponse)request.GetResponse();
+            if (response.StatusCode == HttpStatusCode.OK)
+            {
+                Stream receiveStream = response.GetResponseStream();
+                StreamReader readStream = null;
+                if (response.CharacterSet == null)
+                    readStream = new StreamReader(receiveStream);
+                else
+                    readStream = new StreamReader(receiveStream, Encoding.GetEncoding(response.CharacterSet));
+                string data = readStream.ReadToEnd();
+                response.Close();
+                readStream.Close();
+                JObject o1 = JObject.Parse(data);
+                Console.WriteLine(data.ToString());
+            }
+            #endregion
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -144,7 +187,11 @@ namespace Koda_Radio
             axWindowsMediaPlayer1.URL = lvi.SubItems[1].Text;
             axWindowsMediaPlayer1.Ctlcontrols.play();
             nowPlaying = lvi;
-            this.Text = $"Playing {lvi.Text}";
+            this.Text = $"Playing: {lvi.Text}";
+
+
+            lblStationTitle.Text = lvi.Text;
+            notifIcon.Text = $"Playing: {lvi.Text}";
         }
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -236,8 +283,10 @@ namespace Koda_Radio
             this.Show();
         }
 
+        private bool CloseOverride = false;
         private void closeToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            CloseOverride = true;
             this.Close();
         }
 
@@ -332,10 +381,29 @@ namespace Koda_Radio
 
         private void settingsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            
+            new frmSettings().Show();
+        }
 
-            frmSettings frmStngs = new frmSettings();
-            frmStngs.Show();
+        private void lblAbout_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            new AboutKodaCreations().Show();
+        }
+
+        private void MainWindow_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (chbxHideOnClose.Checked && !CloseOverride)
+            {
+                notifIcon.BalloonTipTitle = "Koda Radio was hidden to the tool bar.";
+                notifIcon.BalloonTipText = "Disable the setting 'Hide On Close' to prevent this from happening.";
+                notifIcon.ShowBalloonTip(500);
+                e.Cancel = true;
+                Hide();
+            }
+        }
+
+        private void notifIcon_BalloonTipClicked(object sender, EventArgs e)
+        {
+            Show();
         }
     }
 }

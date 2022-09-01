@@ -49,7 +49,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>Test_app.Program</StartupObject>
+    <StartupObject>Koda_Radio.Program</StartupObject>
   </PropertyGroup>
   <PropertyGroup>
     <ApplicationIcon>
@@ -90,10 +90,16 @@
     <Compile Include="MainWindow.Designer.cs">
       <DependentUpon>MainWindow.cs</DependentUpon>
     </Compile>
-    <Compile Include="GroupAddEdit.cs">
+    <Compile Include="ui\AboutKodaCreations.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GroupAddEdit.Designer.cs">
+    <Compile Include="ui\AboutKodaCreations.Designer.cs">
+      <DependentUpon>AboutKodaCreations.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ui\GroupAddEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ui\GroupAddEdit.Designer.cs">
       <DependentUpon>GroupAddEdit.cs</DependentUpon>
     </Compile>
     <Compile Include="model\radioGroup.cs" />
@@ -101,10 +107,10 @@
     <Compile Include="model\Settings.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="RadioAddEdit.cs">
+    <Compile Include="ui\RadioAddEdit.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="RadioAddEdit.Designer.cs">
+    <Compile Include="ui\RadioAddEdit.Designer.cs">
       <DependentUpon>RadioAddEdit.cs</DependentUpon>
     </Compile>
     <Compile Include="ui\frmSettings.cs">
@@ -118,7 +124,10 @@
     <EmbeddedResource Include="MainWindow.resx">
       <DependentUpon>MainWindow.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GroupAddEdit.resx">
+    <EmbeddedResource Include="ui\AboutKodaCreations.resx">
+      <DependentUpon>AboutKodaCreations.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ui\GroupAddEdit.resx">
       <DependentUpon>GroupAddEdit.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -131,7 +140,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="RadioAddEdit.resx">
+    <EmbeddedResource Include="ui\RadioAddEdit.resx">
       <DependentUpon>RadioAddEdit.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="documents\RadioList.json" />
@@ -148,7 +157,6 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <None Include="Test app_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

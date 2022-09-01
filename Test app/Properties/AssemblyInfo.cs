@@ -9,7 +9,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyDescription("Network radio player with listing capabilities.")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Koda Creations")]
-[assembly: AssemblyProduct("Test app")]
+[assembly: AssemblyProduct("Koda Radio")]
 [assembly: AssemblyCopyright("Copyright © Koda Creations 2022")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]

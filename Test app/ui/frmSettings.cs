@@ -22,9 +22,7 @@ namespace Koda_radio
 
         private void Save()
         {
-            jsonControl jcont = new jsonControl();
 
-            jcont.
 
         }
 

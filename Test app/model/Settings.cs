@@ -18,6 +18,9 @@ namespace Koda_radio.model
 
         private int _automaticRefreshInterval = 15; // Minute interval the player restarts the playback to prevent lag and unintended stops; 0 = off
 
+
+
+
         public bool HideOnMinimise { get => _hideOnMinimise; set => _hideOnMinimise = value; }
         public bool HideOnClose { get => _hideOnClose; set => _hideOnClose = value; }
         public int AutomaticRefreshInterval { get => _automaticRefreshInterval; set => _automaticRefreshInterval = value; }
@@ -33,8 +36,7 @@ namespace Koda_radio.model
                 file.Create();
             }
             JObject o1 = JObject.Parse(File.ReadAllText(Path.Combine(file.FullName, file.Name)));
-
-            o1.
+            
         }
 
     }

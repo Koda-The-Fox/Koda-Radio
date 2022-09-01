@@ -1,0 +1,27 @@
+F:\Projects\Software\VS Projects\Koda-Radio\Test app\obj\Debug\Koda Radio.csproj.AssemblyReference.cache
+F:\Projects\Software\VS Projects\Koda-Radio\Test app\obj\Debug\Koda Radio.csproj.SuggestedBindingRedirects.cache
+F:\Projects\Software\VS Projects\Koda-Radio\Test app\obj\Debug\Interop.WMPLib.dll
+F:\Projects\Software\VS Projects\Koda-Radio\Test app\obj\Debug\AxInterop.WMPLib.dll
+F:\Projects\Software\VS Projects\Koda-Radio\Test app\obj\Debug\Koda Radio.csproj.ResolveComReference.cache
+F:\Projects\Software\VS Projects\Koda-Radio\Test app\obj\Debug\Koda_Radio.MainWindow.resources
+F:\Projects\Software\VS Projects\Koda-Radio\Test app\obj\Debug\Koda_Radio.GroupAddEdit.resources
+F:\Projects\Software\VS Projects\Koda-Radio\Test app\obj\Debug\Koda_radio.Properties.Resources.resources
+F:\Projects\Software\VS Projects\Koda-Radio\Test app\obj\Debug\Koda_Radio.RadioAddEdit.resources
+F:\Projects\Software\VS Projects\Koda-Radio\Test app\obj\Debug\Koda_radio.frmSettings.resources
+F:\Projects\Software\VS Projects\Koda-Radio\Test app\obj\Debug\Koda Radio.csproj.GenerateResource.cache
+F:\Projects\Software\VS Projects\Koda-Radio\Test app\obj\Debug\Koda Radio.csproj.CoreCompileInputs.cache
+F:\Projects\Software\VS Projects\Koda-Radio\Test app\bin\Debug\Koda Radio.exe.config
+F:\Projects\Software\VS Projects\Koda-Radio\Test app\bin\Debug\Koda Radio.exe.manifest
+F:\Projects\Software\VS Projects\Koda-Radio\Test app\bin\Debug\Koda Radio.application
+F:\Projects\Software\VS Projects\Koda-Radio\Test app\bin\Debug\Koda Radio.exe
+F:\Projects\Software\VS Projects\Koda-Radio\Test app\bin\Debug\Koda Radio.pdb
+F:\Projects\Software\VS Projects\Koda-Radio\Test app\bin\Debug\Newtonsoft.Json.dll
+F:\Projects\Software\VS Projects\Koda-Radio\Test app\bin\Debug\Newtonsoft.Json.xml
+F:\Projects\Software\VS Projects\Koda-Radio\Test app\bin\Debug\Interop.WMPLib.dll
+F:\Projects\Software\VS Projects\Koda-Radio\Test app\bin\Debug\AxInterop.WMPLib.dll
+F:\Projects\Software\VS Projects\Koda-Radio\Test app\obj\Debug\Koda Radio.exe.manifest
+F:\Projects\Software\VS Projects\Koda-Radio\Test app\obj\Debug\Koda Radio.application
+F:\Projects\Software\VS Projects\Koda-Radio\Test app\obj\Debug\Koda Radio.csproj.CopyComplete
+F:\Projects\Software\VS Projects\Koda-Radio\Test app\obj\Debug\Koda Radio.exe
+F:\Projects\Software\VS Projects\Koda-Radio\Test app\obj\Debug\Koda Radio.pdb
+F:\Projects\Software\VS Projects\Koda-Radio\Test app\obj\Debug\Koda_radio.AboutKodaCreations.resources
