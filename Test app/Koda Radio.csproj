@@ -98,6 +98,7 @@
     </Compile>
     <Compile Include="model\radioGroup.cs" />
     <Compile Include="model\radioObject.cs" />
+    <Compile Include="model\Settings.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RadioAddEdit.cs">
@@ -105,6 +106,12 @@
     </Compile>
     <Compile Include="RadioAddEdit.Designer.cs">
       <DependentUpon>RadioAddEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ui\frmSettings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ui\frmSettings.Designer.cs">
+      <DependentUpon>frmSettings.cs</DependentUpon>
     </Compile>
     <Compile Include="util\jsonControl.cs" />
     <Compile Include="util\radioControl.cs" />
@@ -128,6 +135,9 @@
       <DependentUpon>RadioAddEdit.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="documents\RadioList.json" />
+    <EmbeddedResource Include="ui\frmSettings.resx">
+      <DependentUpon>frmSettings.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

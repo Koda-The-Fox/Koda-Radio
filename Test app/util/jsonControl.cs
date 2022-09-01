@@ -7,13 +7,25 @@ using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Test_app.model;
+using Koda_Radio.model;
 using static System.Windows.Forms.ListViewItem;
+using Koda_radio.model;
 
-namespace Test_app.util
+namespace Koda_Radio.util
 {
     public static class jsonControl
     {
+        public static Settings GetSettings()
+        {
+            Settings settings = new Settings();
+
+
+
+
+            return settings;
+        }
+
+
         public static void GetAllRadioFromJson(ListView lv)
         {
             try
@@ -24,7 +36,7 @@ namespace Test_app.util
                 if (fi.Exists) // From file in deployment dir
                     strng = File.ReadAllText(fi.FullName);
                 else // From resources
-                    strng = Encoding.Default.GetString(Properties.Resources.RadioList);
+                    strng = Encoding.Default.GetString(Koda_radio.Properties.Resources.RadioList);
 
 
                 List<object> listViewObj = RadioRecursion(strng);

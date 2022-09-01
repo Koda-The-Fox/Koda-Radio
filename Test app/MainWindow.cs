@@ -10,10 +10,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Test_app.model;
-using Test_app.util;
+using Koda_Radio.model;
+using Koda_Radio.util;
+using Koda_radio;
 
-namespace Test_app
+namespace Koda_Radio
 {
     public partial class MainWindow : Form
     {
@@ -327,6 +328,14 @@ namespace Test_app
         {
 
             jsonControl.GetAllRadioFromJson(listView1);
+        }
+
+        private void settingsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            
+
+            frmSettings frmStngs = new frmSettings();
+            frmStngs.Show();
         }
     }
 }

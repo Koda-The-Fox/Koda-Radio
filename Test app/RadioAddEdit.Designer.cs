@@ -1,4 +1,4 @@
-﻿namespace Test_app
+﻿namespace Koda_Radio
 {
     partial class RadioAddEdit
     {

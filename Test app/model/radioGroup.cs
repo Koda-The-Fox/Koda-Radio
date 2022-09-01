@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Test_app.model
+namespace Koda_Radio.model
 {
     public class radioGroup
     {

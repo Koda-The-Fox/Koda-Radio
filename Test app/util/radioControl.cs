@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Test_app.util
+namespace Koda_Radio.util
 {
     public static class radioControl
     {

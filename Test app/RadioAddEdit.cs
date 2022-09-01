@@ -7,10 +7,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Test_app.model;
-using Test_app.util;
+using Koda_Radio.model;
+using Koda_Radio.util;
 
-namespace Test_app
+namespace Koda_Radio
 {
     public partial class RadioAddEdit : Form
     {
