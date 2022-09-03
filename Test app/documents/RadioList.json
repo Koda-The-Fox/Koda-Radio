@@ -4,26 +4,45 @@
     "URL": "https://gooischstream.hofstreaming.nl/proxy/gooisch_main?mp=/stream"
   },
   "Radio Veronica": {
+    "Fetch": {
+      "URL": "https://graph.talparad.io/?query=",
+      "Query": "{ getStation(profile: \"radio-brand-web\" slug: \"@station@\") { title playouts(profile: \"\", limit: 5) { broadcastDate track { id title artistName isrc images { type uri __typename } __typename } __typename } __typename } }"
+    },
     "Type": "Group",
     "Radio Veronica": {
       "Type": "Station",
-      "URL": "http://playerservices.streamtheworld.com/api/livestream-redirect/VERONICA.mp3"
+      "URL": "http://playerservices.streamtheworld.com/api/livestream-redirect/VERONICA.mp3",
+      "Fetch": {
+        "station": "radio-veronica"
+      }
     },
     "Alternative": {
       "Type": "Station",
-      "URL": "http://playerservices.streamtheworld.com/api/livestream-redirect/SRGSTR12.mp3"
+      "URL": "http://playerservices.streamtheworld.com/api/livestream-redirect/SRGSTR12.mp3",
+      "Fetch": {
+        "station": "radio-veronica-alternative-xl"
+      }
     },
-    "Veronica Non-Stop": {
+    "Vintage Veronica": {
       "Type": "Station",
-      "URL": "http://playerservices.streamtheworld.com/api/livestream-redirect/SRGSTR09.mp3"
+      "URL": "http://playerservices.streamtheworld.com/api/livestream-redirect/SRGSTR09.mp3",
+      "Fetch": {
+        "station": "vintage-veronica"
+      }
     },
     "Veronica Rock Radio": {
       "Type": "Station",
-      "URL": "http://playerservices.streamtheworld.com/api/livestream-redirect/SRGSTR11.mp3"
+      "URL": "http://playerservices.streamtheworld.com/api/livestream-redirect/SRGSTR11.mp3",
+      "Fetch": {
+        "station": "radio-veronica-rockradio"
+      }
     },
     "Veronica Top 1000 Allertijden": {
       "Type": "Station",
-      "URL": "http://playerservices.streamtheworld.com/api/livestream-redirect/SRGSTR10.mp3"
+      "URL": "http://playerservices.streamtheworld.com/api/livestream-redirect/SRGSTR10.mp3",
+      "Fetch": {
+        "station": "radio-veronica-top-1000-allertijden"
+      }
     }
   },
   "NPO": {

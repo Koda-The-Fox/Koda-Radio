@@ -29,34 +29,34 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.ListViewGroup listViewGroup7 = new System.Windows.Forms.ListViewGroup("Radio 538", System.Windows.Forms.HorizontalAlignment.Left);
-            System.Windows.Forms.ListViewGroup listViewGroup8 = new System.Windows.Forms.ListViewGroup("Radio 2", System.Windows.Forms.HorizontalAlignment.Left);
-            System.Windows.Forms.ListViewGroup listViewGroup9 = new System.Windows.Forms.ListViewGroup("Radio Veronica", System.Windows.Forms.HorizontalAlignment.Left);
-            System.Windows.Forms.ListViewItem listViewItem19 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewGroup listViewGroup4 = new System.Windows.Forms.ListViewGroup("Radio 538", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewGroup listViewGroup5 = new System.Windows.Forms.ListViewGroup("Radio 2", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewGroup listViewGroup6 = new System.Windows.Forms.ListViewGroup("Radio Veronica", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewItem listViewItem10 = new System.Windows.Forms.ListViewItem(new string[] {
             "538",
             "http://playerservices.streamtheworld.com/api/livestream-redirect/RADIO538.mp3"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem20 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem11 = new System.Windows.Forms.ListViewItem(new string[] {
             "538 Dance Dept.",
             "http://playerservices.streamtheworld.com/api/livestream-redirect/TLPSTR01.mp3"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem21 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem12 = new System.Windows.Forms.ListViewItem(new string[] {
             "Sky Radio 101 FM",
             "http://playerservices.streamtheworld.com/api/livestream-redirect/SKYRADIO.mp3"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem22 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem13 = new System.Windows.Forms.ListViewItem(new string[] {
             "NPO Radio 2",
             "https://icecast.omroep.nl/radio2-bb-mp3"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem23 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem14 = new System.Windows.Forms.ListViewItem(new string[] {
             "Radio Veronica",
             "http://playerservices.streamtheworld.com/api/livestream-redirect/VERONICA.mp3"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem24 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem15 = new System.Windows.Forms.ListViewItem(new string[] {
             "Alternative",
             "http://playerservices.streamtheworld.com/api/livestream-redirect/SRGSTR12.mp3"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem25 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem16 = new System.Windows.Forms.ListViewItem(new string[] {
             "Veronica Non-Stop",
             "http://playerservices.streamtheworld.com/api/livestream-redirect/SRGSTR09.mp3"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem26 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem17 = new System.Windows.Forms.ListViewItem(new string[] {
             "Veronica Rock Radio",
             "http://playerservices.streamtheworld.com/api/livestream-redirect/SRGSTR11.mp3"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem27 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem18 = new System.Windows.Forms.ListViewItem(new string[] {
             "Veronica Top 1000 Allertijden",
             "http://playerservices.streamtheworld.com/api/livestream-redirect/SRGSTR10.mp3"}, -1);
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainWindow));
@@ -64,14 +64,26 @@
             this.chName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.chURL = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.lblDisclaimer = new System.Windows.Forms.Label();
+            this.chbxHideOnClose = new System.Windows.Forms.CheckBox();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.lblSong2Timestamp = new System.Windows.Forms.Label();
+            this.lblSong2Title = new System.Windows.Forms.Label();
+            this.lblStationTitleRO = new System.Windows.Forms.Label();
+            this.lblSong1Timestamp = new System.Windows.Forms.Label();
+            this.lblStationTitle = new System.Windows.Forms.Label();
+            this.lblSong1Title = new System.Windows.Forms.Label();
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.axWindowsMediaPlayer1 = new AxWMPLib.AxWindowsMediaPlayer();
             this.label1 = new System.Windows.Forms.Label();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
+            this.lblAbout = new System.Windows.Forms.LinkLabel();
             this.button5 = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lblVersion = new System.Windows.Forms.Label();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.button1 = new System.Windows.Forms.Button();
             this.btnRemove = new System.Windows.Forms.Button();
@@ -102,33 +114,26 @@
             this.tsmiStationRoot = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
             this.settingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.hideToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.openToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiChangeState = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.closeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.timerVolumeUpdater = new System.Windows.Forms.Timer(this.components);
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.lblStationTitleRO = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.lblStationTitle = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.axWindowsMediaPlayer1 = new AxWMPLib.AxWindowsMediaPlayer();
-            this.lblAbout = new System.Windows.Forms.LinkLabel();
-            this.chbxHideOnClose = new System.Windows.Forms.CheckBox();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.tmrSongUpdtr = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
+            this.tableLayoutPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).BeginInit();
             this.splitContainer2.Panel1.SuspendLayout();
             this.splitContainer2.Panel2.SuspendLayout();
             this.splitContainer2.SuspendLayout();
             this.notifIconCMS.SuspendLayout();
-            this.tableLayoutPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer1)).BeginInit();
             this.SuspendLayout();
             // 
             // listView1
@@ -139,36 +144,36 @@
             this.listView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.listView1.FullRowSelect = true;
             this.listView1.GridLines = true;
-            listViewGroup7.Header = "Radio 538";
-            listViewGroup7.Name = "lvg538";
-            listViewGroup8.Header = "Radio 2";
-            listViewGroup8.Name = "lvgRa2";
-            listViewGroup9.Header = "Radio Veronica";
-            listViewGroup9.Name = "lvgVeronica";
+            listViewGroup4.Header = "Radio 538";
+            listViewGroup4.Name = "lvg538";
+            listViewGroup5.Header = "Radio 2";
+            listViewGroup5.Name = "lvgRa2";
+            listViewGroup6.Header = "Radio Veronica";
+            listViewGroup6.Name = "lvgVeronica";
             this.listView1.Groups.AddRange(new System.Windows.Forms.ListViewGroup[] {
-            listViewGroup7,
-            listViewGroup8,
-            listViewGroup9});
+            listViewGroup4,
+            listViewGroup5,
+            listViewGroup6});
             this.listView1.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
             this.listView1.HideSelection = false;
-            listViewItem19.Group = listViewGroup7;
-            listViewItem20.Group = listViewGroup7;
-            listViewItem22.Group = listViewGroup8;
-            listViewItem23.Group = listViewGroup9;
-            listViewItem24.Group = listViewGroup9;
-            listViewItem25.Group = listViewGroup9;
-            listViewItem26.Group = listViewGroup9;
-            listViewItem27.Group = listViewGroup9;
+            listViewItem10.Group = listViewGroup4;
+            listViewItem11.Group = listViewGroup4;
+            listViewItem13.Group = listViewGroup5;
+            listViewItem14.Group = listViewGroup6;
+            listViewItem15.Group = listViewGroup6;
+            listViewItem16.Group = listViewGroup6;
+            listViewItem17.Group = listViewGroup6;
+            listViewItem18.Group = listViewGroup6;
             this.listView1.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem19,
-            listViewItem20,
-            listViewItem21,
-            listViewItem22,
-            listViewItem23,
-            listViewItem24,
-            listViewItem25,
-            listViewItem26,
-            listViewItem27});
+            listViewItem10,
+            listViewItem11,
+            listViewItem12,
+            listViewItem13,
+            listViewItem14,
+            listViewItem15,
+            listViewItem16,
+            listViewItem17,
+            listViewItem18});
             this.listView1.Location = new System.Drawing.Point(0, 0);
             this.listView1.Margin = new System.Windows.Forms.Padding(2);
             this.listView1.MultiSelect = false;
@@ -198,10 +203,13 @@
             // 
             // splitContainer1.Panel1
             // 
+            this.splitContainer1.Panel1.Controls.Add(this.lblDisclaimer);
+            this.splitContainer1.Panel1.Controls.Add(this.chbxHideOnClose);
             this.splitContainer1.Panel1.Controls.Add(this.tableLayoutPanel1);
             this.splitContainer1.Panel1.Controls.Add(this.button4);
             this.splitContainer1.Panel1.Controls.Add(this.button3);
             this.splitContainer1.Panel1.Controls.Add(this.button2);
+            this.splitContainer1.Panel1.Controls.Add(this.pictureBox1);
             this.splitContainer1.Panel1.Controls.Add(this.numericUpDown1);
             this.splitContainer1.Panel1.Controls.Add(this.axWindowsMediaPlayer1);
             this.splitContainer1.Panel1.Controls.Add(this.label1);
@@ -213,6 +221,110 @@
             this.splitContainer1.SplitterDistance = 376;
             this.splitContainer1.SplitterWidth = 3;
             this.splitContainer1.TabIndex = 2;
+            // 
+            // lblDisclaimer
+            // 
+            this.lblDisclaimer.AutoSize = true;
+            this.lblDisclaimer.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDisclaimer.Location = new System.Drawing.Point(127, 110);
+            this.lblDisclaimer.Name = "lblDisclaimer";
+            this.lblDisclaimer.Size = new System.Drawing.Size(238, 12);
+            this.lblDisclaimer.TabIndex = 11;
+            this.lblDisclaimer.Text = "Any ads you may experience are not from the application.";
+            // 
+            // chbxHideOnClose
+            // 
+            this.chbxHideOnClose.AutoSize = true;
+            this.chbxHideOnClose.Location = new System.Drawing.Point(127, 32);
+            this.chbxHideOnClose.Name = "chbxHideOnClose";
+            this.chbxHideOnClose.Size = new System.Drawing.Size(94, 17);
+            this.chbxHideOnClose.TabIndex = 8;
+            this.chbxHideOnClose.Text = "Hide On Close";
+            this.chbxHideOnClose.UseVisualStyleBackColor = true;
+            // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.OutsetDouble;
+            this.tableLayoutPanel1.ColumnCount = 2;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tableLayoutPanel1.Controls.Add(this.lblSong2Timestamp, 0, 2);
+            this.tableLayoutPanel1.Controls.Add(this.lblSong2Title, 0, 2);
+            this.tableLayoutPanel1.Controls.Add(this.lblStationTitleRO, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.lblSong1Timestamp, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.lblStationTitle, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.lblSong1Title, 1, 1);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(3, 127);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 4;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 28F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 28F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 28F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 28F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(370, 262);
+            this.tableLayoutPanel1.TabIndex = 10;
+            // 
+            // lblSong2Timestamp
+            // 
+            this.lblSong2Timestamp.AutoSize = true;
+            this.lblSong2Timestamp.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lblSong2Timestamp.Location = new System.Drawing.Point(6, 65);
+            this.lblSong2Timestamp.Name = "lblSong2Timestamp";
+            this.lblSong2Timestamp.Size = new System.Drawing.Size(43, 28);
+            this.lblSong2Timestamp.TabIndex = 5;
+            this.lblSong2Timestamp.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // lblSong2Title
+            // 
+            this.lblSong2Title.AutoSize = true;
+            this.lblSong2Title.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lblSong2Title.Location = new System.Drawing.Point(58, 65);
+            this.lblSong2Title.Name = "lblSong2Title";
+            this.lblSong2Title.Size = new System.Drawing.Size(306, 28);
+            this.lblSong2Title.TabIndex = 4;
+            this.lblSong2Title.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // lblStationTitleRO
+            // 
+            this.lblStationTitleRO.AutoSize = true;
+            this.lblStationTitleRO.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lblStationTitleRO.Location = new System.Drawing.Point(6, 3);
+            this.lblStationTitleRO.Name = "lblStationTitleRO";
+            this.lblStationTitleRO.Size = new System.Drawing.Size(43, 28);
+            this.lblStationTitleRO.TabIndex = 0;
+            this.lblStationTitleRO.Text = "Station:";
+            this.lblStationTitleRO.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // lblSong1Timestamp
+            // 
+            this.lblSong1Timestamp.AutoSize = true;
+            this.lblSong1Timestamp.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lblSong1Timestamp.Location = new System.Drawing.Point(6, 34);
+            this.lblSong1Timestamp.Name = "lblSong1Timestamp";
+            this.lblSong1Timestamp.Size = new System.Drawing.Size(43, 28);
+            this.lblSong1Timestamp.TabIndex = 1;
+            this.lblSong1Timestamp.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // lblStationTitle
+            // 
+            this.lblStationTitle.AutoSize = true;
+            this.lblStationTitle.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lblStationTitle.Location = new System.Drawing.Point(58, 3);
+            this.lblStationTitle.Name = "lblStationTitle";
+            this.lblStationTitle.Size = new System.Drawing.Size(306, 28);
+            this.lblStationTitle.TabIndex = 2;
+            this.lblStationTitle.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // lblSong1Title
+            // 
+            this.lblSong1Title.AutoSize = true;
+            this.lblSong1Title.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lblSong1Title.Location = new System.Drawing.Point(58, 34);
+            this.lblSong1Title.Name = "lblSong1Title";
+            this.lblSong1Title.Size = new System.Drawing.Size(306, 28);
+            this.lblSong1Title.TabIndex = 3;
+            this.lblSong1Title.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblSong1Title.TextChanged += new System.EventHandler(this.lblSong1Title_TextChanged);
             // 
             // button4
             // 
@@ -247,6 +359,16 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(2, 2);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(120, 120);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 6;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Visible = false;
+            // 
             // numericUpDown1
             // 
             this.numericUpDown1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
@@ -260,6 +382,19 @@
             0,
             0});
             this.numericUpDown1.ValueChanged += new System.EventHandler(this.numericUpDown1_ValueChanged);
+            // 
+            // axWindowsMediaPlayer1
+            // 
+            this.axWindowsMediaPlayer1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.axWindowsMediaPlayer1.Enabled = true;
+            this.axWindowsMediaPlayer1.Location = new System.Drawing.Point(2, 2);
+            this.axWindowsMediaPlayer1.Margin = new System.Windows.Forms.Padding(2);
+            this.axWindowsMediaPlayer1.Name = "axWindowsMediaPlayer1";
+            this.axWindowsMediaPlayer1.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axWindowsMediaPlayer1.OcxState")));
+            this.axWindowsMediaPlayer1.Size = new System.Drawing.Size(120, 120);
+            this.axWindowsMediaPlayer1.TabIndex = 0;
             // 
             // label1
             // 
@@ -286,10 +421,9 @@
             // 
             // splitContainer2.Panel2
             // 
-            this.splitContainer2.Panel2.Controls.Add(this.chbxHideOnClose);
             this.splitContainer2.Panel2.Controls.Add(this.lblAbout);
             this.splitContainer2.Panel2.Controls.Add(this.button5);
-            this.splitContainer2.Panel2.Controls.Add(this.label2);
+            this.splitContainer2.Panel2.Controls.Add(this.lblVersion);
             this.splitContainer2.Panel2.Controls.Add(this.linkLabel1);
             this.splitContainer2.Panel2.Controls.Add(this.button1);
             this.splitContainer2.Panel2.Controls.Add(this.btnRemove);
@@ -300,6 +434,17 @@
             this.splitContainer2.SplitterDistance = 318;
             this.splitContainer2.SplitterWidth = 3;
             this.splitContainer2.TabIndex = 2;
+            // 
+            // lblAbout
+            // 
+            this.lblAbout.AutoSize = true;
+            this.lblAbout.Location = new System.Drawing.Point(288, 51);
+            this.lblAbout.Name = "lblAbout";
+            this.lblAbout.Size = new System.Drawing.Size(35, 13);
+            this.lblAbout.TabIndex = 7;
+            this.lblAbout.TabStop = true;
+            this.lblAbout.Text = "About";
+            this.lblAbout.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblAbout_LinkClicked);
             // 
             // button5
             // 
@@ -312,16 +457,15 @@
             this.button5.UseVisualStyleBackColor = true;
             this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
-            // label2
+            // lblVersion
             // 
-            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(329, 58);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(34, 13);
-            this.label2.TabIndex = 5;
-            this.label2.Text = "v. 1.1";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.BottomRight;
+            this.lblVersion.AutoSize = true;
+            this.lblVersion.Location = new System.Drawing.Point(329, 52);
+            this.lblVersion.Name = "lblVersion";
+            this.lblVersion.Size = new System.Drawing.Size(34, 13);
+            this.lblVersion.TabIndex = 5;
+            this.lblVersion.Text = "v. 1.1";
+            this.lblVersion.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // linkLabel1
             // 
@@ -397,12 +541,11 @@
             this.tsmiStationRoot,
             this.toolStripSeparator4,
             this.settingsToolStripMenuItem,
-            this.hideToolStripMenuItem,
-            this.openToolStripMenuItem,
+            this.tsmiChangeState,
             this.toolStripSeparator3,
             this.closeToolStripMenuItem});
             this.notifIconCMS.Name = "notifIconCMS";
-            this.notifIconCMS.Size = new System.Drawing.Size(120, 176);
+            this.notifIconCMS.Size = new System.Drawing.Size(120, 154);
             this.notifIconCMS.Text = "Radio";
             this.notifIconCMS.Opened += new System.EventHandler(this.notifIconCMS_Opened);
             // 
@@ -574,19 +717,12 @@
             this.settingsToolStripMenuItem.Text = "Settings";
             this.settingsToolStripMenuItem.Click += new System.EventHandler(this.settingsToolStripMenuItem_Click);
             // 
-            // hideToolStripMenuItem
+            // tsmiChangeState
             // 
-            this.hideToolStripMenuItem.Name = "hideToolStripMenuItem";
-            this.hideToolStripMenuItem.Size = new System.Drawing.Size(119, 22);
-            this.hideToolStripMenuItem.Text = "Hide";
-            this.hideToolStripMenuItem.Click += new System.EventHandler(this.hideToolStripMenuItem_Click);
-            // 
-            // openToolStripMenuItem
-            // 
-            this.openToolStripMenuItem.Name = "openToolStripMenuItem";
-            this.openToolStripMenuItem.Size = new System.Drawing.Size(119, 22);
-            this.openToolStripMenuItem.Text = "Open";
-            this.openToolStripMenuItem.Click += new System.EventHandler(this.openToolStripMenuItem_Click);
+            this.tsmiChangeState.Name = "tsmiChangeState";
+            this.tsmiChangeState.Size = new System.Drawing.Size(119, 22);
+            this.tsmiChangeState.Text = "Hide";
+            this.tsmiChangeState.Click += new System.EventHandler(this.tsmiChangeState_Click);
             // 
             // toolStripSeparator3
             // 
@@ -606,102 +742,11 @@
             this.timerVolumeUpdater.Interval = 1000;
             this.timerVolumeUpdater.Tick += new System.EventHandler(this.timerVolumeTextUpdater_Tick);
             // 
-            // tableLayoutPanel1
+            // tmrSongUpdtr
             // 
-            this.tableLayoutPanel1.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.OutsetDouble;
-            this.tableLayoutPanel1.ColumnCount = 2;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tableLayoutPanel1.Controls.Add(this.lblStationTitleRO, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.label4, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.lblStationTitle, 1, 0);
-            this.tableLayoutPanel1.Controls.Add(this.label6, 1, 1);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(3, 127);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 3;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 28F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 28F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 28F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(370, 262);
-            this.tableLayoutPanel1.TabIndex = 10;
-            // 
-            // lblStationTitleRO
-            // 
-            this.lblStationTitleRO.AutoSize = true;
-            this.lblStationTitleRO.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblStationTitleRO.Location = new System.Drawing.Point(6, 3);
-            this.lblStationTitleRO.Name = "lblStationTitleRO";
-            this.lblStationTitleRO.Size = new System.Drawing.Size(43, 28);
-            this.lblStationTitleRO.TabIndex = 0;
-            this.lblStationTitleRO.Text = "Station:";
-            this.lblStationTitleRO.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label4.Location = new System.Drawing.Point(6, 34);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(43, 28);
-            this.label4.TabIndex = 1;
-            this.label4.Text = "label4";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // lblStationTitle
-            // 
-            this.lblStationTitle.AutoSize = true;
-            this.lblStationTitle.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblStationTitle.Location = new System.Drawing.Point(58, 3);
-            this.lblStationTitle.Name = "lblStationTitle";
-            this.lblStationTitle.Size = new System.Drawing.Size(306, 28);
-            this.lblStationTitle.TabIndex = 2;
-            this.lblStationTitle.Text = "label5";
-            this.lblStationTitle.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label6.Location = new System.Drawing.Point(58, 34);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(306, 28);
-            this.label6.TabIndex = 3;
-            this.label6.Text = "label6";
-            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // axWindowsMediaPlayer1
-            // 
-            this.axWindowsMediaPlayer1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.axWindowsMediaPlayer1.Enabled = true;
-            this.axWindowsMediaPlayer1.Location = new System.Drawing.Point(2, 2);
-            this.axWindowsMediaPlayer1.Margin = new System.Windows.Forms.Padding(2);
-            this.axWindowsMediaPlayer1.Name = "axWindowsMediaPlayer1";
-            this.axWindowsMediaPlayer1.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axWindowsMediaPlayer1.OcxState")));
-            this.axWindowsMediaPlayer1.Size = new System.Drawing.Size(120, 120);
-            this.axWindowsMediaPlayer1.TabIndex = 0;
-            // 
-            // lblAbout
-            // 
-            this.lblAbout.AutoSize = true;
-            this.lblAbout.Location = new System.Drawing.Point(262, 51);
-            this.lblAbout.Name = "lblAbout";
-            this.lblAbout.Size = new System.Drawing.Size(35, 13);
-            this.lblAbout.TabIndex = 7;
-            this.lblAbout.TabStop = true;
-            this.lblAbout.Text = "About";
-            this.lblAbout.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblAbout_LinkClicked);
-            // 
-            // chbxHideOnClose
-            // 
-            this.chbxHideOnClose.AutoSize = true;
-            this.chbxHideOnClose.Location = new System.Drawing.Point(89, 51);
-            this.chbxHideOnClose.Name = "chbxHideOnClose";
-            this.chbxHideOnClose.Size = new System.Drawing.Size(94, 17);
-            this.chbxHideOnClose.TabIndex = 8;
-            this.chbxHideOnClose.Text = "Hide On Close";
-            this.chbxHideOnClose.UseVisualStyleBackColor = true;
+            this.tmrSongUpdtr.Enabled = true;
+            this.tmrSongUpdtr.Interval = 5000;
+            this.tmrSongUpdtr.Tick += new System.EventHandler(this.tmrSongUpdtr_Tick);
             // 
             // MainWindow
             // 
@@ -713,22 +758,24 @@
             this.Name = "MainWindow";
             this.Text = "Radio";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainWindow_FormClosing);
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.MainWindow_FormClosed);
             this.Load += new System.EventHandler(this.Form1_Load);
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel1.PerformLayout();
             this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
+            this.tableLayoutPanel1.ResumeLayout(false);
+            this.tableLayoutPanel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer1)).EndInit();
             this.splitContainer2.Panel1.ResumeLayout(false);
             this.splitContainer2.Panel2.ResumeLayout(false);
             this.splitContainer2.Panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).EndInit();
             this.splitContainer2.ResumeLayout(false);
             this.notifIconCMS.ResumeLayout(false);
-            this.tableLayoutPanel1.ResumeLayout(false);
-            this.tableLayoutPanel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -761,8 +808,6 @@
         private System.Windows.Forms.ToolStripMenuItem tsmiCurVolRO;
         private System.Windows.Forms.Timer timerVolumeUpdater;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
-        private System.Windows.Forms.ToolStripMenuItem hideToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem openToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
         private System.Windows.Forms.ToolStripMenuItem closeToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem tsmiStationRoot;
@@ -779,18 +824,24 @@
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem7;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator6;
         private System.Windows.Forms.ToolStripTextBox tsCurVolBox;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblVersion;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.ToolStripMenuItem settingsToolStripMenuItem;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Label lblStationTitleRO;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lblSong1Timestamp;
         private System.Windows.Forms.Label lblStationTitle;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label lblSong1Title;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.LinkLabel lblAbout;
         private System.Windows.Forms.CheckBox chbxHideOnClose;
         private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.Label lblDisclaimer;
+        private System.Windows.Forms.Label lblSong2Timestamp;
+        private System.Windows.Forms.Label lblSong2Title;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.ToolStripMenuItem tsmiChangeState;
+        private System.Windows.Forms.Timer tmrSongUpdtr;
     }
 }
 

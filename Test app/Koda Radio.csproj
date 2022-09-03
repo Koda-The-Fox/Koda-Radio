@@ -90,6 +90,7 @@
     <Compile Include="MainWindow.Designer.cs">
       <DependentUpon>MainWindow.cs</DependentUpon>
     </Compile>
+    <Compile Include="model\Fetch.cs" />
     <Compile Include="ui\AboutKodaCreations.cs">
       <SubType>Form</SubType>
     </Compile>

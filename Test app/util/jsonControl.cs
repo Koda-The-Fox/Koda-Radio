@@ -28,6 +28,7 @@ namespace Koda_Radio.util
 
         public static void GetAllRadioFromJson(ListView lv)
         {
+            //List<object> listObj = new List<object>();
             try
             {
                 string strng = "";
@@ -39,30 +40,30 @@ namespace Koda_Radio.util
                     strng = Encoding.Default.GetString(Koda_radio.Properties.Resources.RadioList);
 
 
-                List<object> listViewObj = RadioRecursion(strng);
+                MainWindow.listObj = RadioRecursion(strng);
 
 
 
                 lv.Items.Clear();
                 lv.Groups.Clear();
 
-                foreach (object obj in listViewObj)
+                foreach (object obj in MainWindow.listObj)
                 {
                     bool lvi = false;
                     try
                     {
-                        ListViewItem item = (ListViewItem)obj;
+                        radioObject item = (radioObject)obj;
                         lvi = true;
-                        lv.Items.Add(item);
+                        lv.Items.Add(item.GetListViewItem());
                     }
-                    catch (Exception ignore) { }
+                    catch { }
                     if (!lvi) 
                     {
                         try
                         {
-                            ListViewGroup group = (ListViewGroup)obj;
-                            lv.Groups.Add(group);
-                        }catch (Exception ignore) { }
+                            radioGroup group = (radioGroup)obj;
+                            lv.Groups.Add(group.GetListViewGroup());
+                        }catch { }
                     }
                 }
                 
@@ -87,28 +88,72 @@ namespace Koda_Radio.util
             List<Object> returnList = new List<Object>();
             JObject jObject = JObject.Parse(strng);
 
-            foreach (KeyValuePair<string, JToken> child in jObject)
-            {
-                if (child.Value.ToString().ToLower() == "station")
+            if (objName != null ? objName.ToLower() != "fetch" : true)
+                foreach (KeyValuePair<string, JToken> child in jObject)
                 {
-                    returnList.Add(createLVI(jObject, objName));
-                    break;
+                    if (child.Value.ToString().ToLower() == "station")
+                    {
+                        //returnList.Add(createLVI(jObject, objName));
+                        returnList.Add(createRadioObject(jObject, objName));
+                        break;
+                    }
+                    else if (child.Value.ToString().ToLower() == "group")
+                    {
+                        //returnList.Add(createLVGI(jObject, objName));
+                        returnList.Add(createRadioGroup(jObject, objName));
+                        break;
+                    }
+                    else
+                    {
+                        returnList.AddRange(RadioRecursion(child.Value.ToString(), child.Key.ToString()));
+                        continue;
+                    }
                 }
-                else if (child.Value.ToString().ToLower() == "group")
+            return returnList;
+        }
+
+        private static Object FetchRecursion(String joStrng, radioObject raObj = null, radioGroup raGrp = null)
+        {
+            List<Object> returnList = new List<Object>();
+            JObject jo = JObject.Parse(joStrng);
+
+            foreach (KeyValuePair<string, JToken> child in jo)
+            {
+                if (child.Key.ToString().ToLower() == "url")
                 {
-                    returnList.Add(createLVGI(jObject, objName));
-                    break;
+                    raGrp.FetchURL = child.Value.ToString();
+                }
+                else if (child.Key.ToString().ToLower() == "query")
+                {
+                    raGrp.FetchQuery = child.Value.ToString();
+                }
+                else if (child.Key.ToString().ToLower() == "station")
+                {
+                    raObj.FetchName = child.Value.ToString();
                 }
                 else
                 {
-
-                    returnList.AddRange(RadioRecursion(child.Value.ToString(), child.Key.ToString()));
+                    if (raGrp != null)
+                    {
+                        raGrp = (radioGroup)FetchRecursion(child.Value.ToString(), raObj, raGrp);
+                    }
+                    else
+                    {
+                        raObj = (radioObject)FetchRecursion(child.Value.ToString(), raObj, raGrp);
+                    }
                     continue;
                 }
             }
-
-            return returnList;
+            if (raGrp != null)
+            {
+                return raGrp;
+            }
+            else 
+            {
+                return raObj;
+            }
         }
+
 
         private static ListViewItem createLVI(JObject jo, string stationName)
         {
@@ -116,18 +161,13 @@ namespace Koda_Radio.util
             lvi.Text = stationName;
             foreach (KeyValuePair<string, JToken> child in jo)
             {
-                /*if (child.Key.ToLower() == "name")
-                {
-                    lvi.Text = child.Value.ToString();
-                }
-                else */if (child.Key.ToLower() == "url")
+                if (child.Key.ToLower() == "url")
                 {
                     lvi.SubItems.Add(new ListViewSubItem().Text = child.Value.ToString());
                 }
             }
             return lvi;
         }
-
         private static ListViewGroup createLVGI(JObject jo, string groupName)
         {
             ListViewGroup lvg = new ListViewGroup();
@@ -138,8 +178,50 @@ namespace Koda_Radio.util
                 {
                     lvg.Items.Add(createLVI(JObject.Parse(child.Value.ToString()), child.Key));
                 }
+                else if (child.Key.ToLower() == "fetch")
+                {
+
+                }
             }
             return lvg;
+        }
+
+        private static radioObject createRadioObject(JObject jo, string stationName)
+        {
+            radioObject raObj = new radioObject();
+            raObj.Name = stationName;
+            foreach (KeyValuePair<string, JToken> child in jo)
+            {
+                if (child.Key.ToLower() == "url")
+                {
+                    raObj.Url = child.Value.ToString();
+                }
+                else if (child.Key.ToLower() == "fetch")
+                {
+                    raObj = (radioObject)FetchRecursion(child.Value.ToString(), raObj);
+                }
+            }
+            return raObj;
+        }
+
+        private static radioGroup createRadioGroup(JObject jo, string groupName)
+        {
+            radioGroup raGrp = new radioGroup();
+            raGrp.Name = groupName;
+            foreach (KeyValuePair<string, JToken> child in jo)
+            {
+                if (child.Key.ToLower() == "fetch")
+                {
+                    raGrp = (radioGroup)FetchRecursion(child.Value.ToString(), null, raGrp);
+                }
+                else if (child.Key.ToLower() != "type")
+                {
+                    radioObject raObj = createRadioObject(JObject.Parse(child.Value.ToString()), child.Key);
+                    raObj.Group = groupName;
+                    raGrp.Radios.Add(raObj);
+                }
+            }
+            return raGrp;
         }
 
 

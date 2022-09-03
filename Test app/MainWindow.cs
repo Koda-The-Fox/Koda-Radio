@@ -14,12 +14,16 @@ using Koda_Radio.model;
 using Koda_Radio.util;
 using Koda_radio;
 using System.Net;
+using System.Reflection;
 
 namespace Koda_Radio
 {
     public partial class MainWindow : Form
     {
-        ListViewItem nowPlaying = null;
+        public static List<object> listObj = new List<object>();
+        radioObject nowPlayingStation = null;
+        radioGroup nowPlayingGroup = null;
+        //ListViewItem nowPlaying = null;
          
 
         public MainWindow()
@@ -27,6 +31,8 @@ namespace Koda_Radio
             InitializeComponent();
             axWindowsMediaPlayer1.uiMode = "none";
             axWindowsMediaPlayer1.settings.volume = (int)numericUpDown1.Value;
+
+            lblVersion.Text = String.Format("v.{0}", Assembly.GetExecutingAssembly().GetName().Version.ToString());
 
 
             #region Test Track viewer
@@ -85,7 +91,7 @@ namespace Koda_Radio
             if (File.Exists(filePath))
             {
                 File.Create(filePath).Dispose();
-                if (File.ReadAllText(filePath) == "")
+                if (string.IsNullOrEmpty(File.ReadAllText(filePath)))
                 {
                     File.AppendAllText(filePath, "{}");
                 }
@@ -166,6 +172,9 @@ namespace Koda_Radio
 
         private void ChangeRadioStation(object sender, EventArgs e, object target = null)
         {
+            nowPlayingGroup = null;
+            nowPlayingStation = null;
+
             ListViewItem lvi = null;
             if (target == null)
                 lvi = sender as ListViewItem;
@@ -173,8 +182,8 @@ namespace Koda_Radio
                 lvi = target as ListViewItem;
 
 
-            Console.WriteLine("Playing: " + lvi.SubItems[0].Text);
-            Console.WriteLine("url: " + lvi.SubItems[1].Text);
+            //Console.WriteLine("Playing: " + lvi.SubItems[0].Text);
+            //Console.WriteLine("url: " + lvi.SubItems[1].Text);
             
             
             foreach (ListViewItem lvi2 in listView1.Items){
@@ -186,7 +195,37 @@ namespace Koda_Radio
 
             axWindowsMediaPlayer1.URL = lvi.SubItems[1].Text;
             axWindowsMediaPlayer1.Ctlcontrols.play();
-            nowPlaying = lvi;
+            //nowPlaying = lvi;
+            
+
+            foreach (object obj in listObj)
+            {
+                try
+                {
+                    radioObject raObj = (radioObject)obj;
+                    if (raObj.lviEquals(lvi))
+                    {
+                        nowPlayingStation = raObj;
+                        break;
+                    }
+                }
+                catch
+                {
+                    radioGroup raGrp = (radioGroup)obj;
+                    foreach (radioObject raObj in raGrp.Radios)
+                    {
+                        if (raObj.lviEquals(lvi))
+                        {
+                            nowPlayingGroup = raGrp;
+                            nowPlayingStation = raObj;
+                            break;
+                        }
+                    }
+                }
+            }
+
+            //nowPlaying = playingResult;
+
             this.Text = $"Playing: {lvi.Text}";
 
 
@@ -298,13 +337,16 @@ namespace Koda_Radio
 
         private void notifIcon_MouseDoubleClick(object sender, MouseEventArgs e)
         {
-            this.Show();
-            this.Focus();
+            tsmiChangeState.Text = "Hide";
+            Show();
+            Activate(); // send to front
+            WindowState = FormWindowState.Normal;
         }
 
         private void notifIconCMS_Opened(object sender, EventArgs e)
         {
-            Console.WriteLine("CMS Openened");
+            //Console.WriteLine("CMS Openened");
+
             tsmiStationRoot.DropDownItems.Clear();
             // Groups
             foreach (ListViewGroup lvg in listView1.Groups)
@@ -320,8 +362,9 @@ namespace Koda_Radio
                     tsmItem.Text = lvi.Text;
                     tsmItem.Name = lvi.Name;
                     tsmItem.Click += (se, ev) => this.ChangeRadioStation(lvi, ev);
-                    if (lvi == nowPlaying)
-                        tsmItem.Checked = true;
+                    if (nowPlayingStation != null)
+                        if (lvi == nowPlayingStation.GetListViewItem())
+                            tsmItem.Checked = true;
                     groupItem.DropDownItems.Add(tsmItem);
                 }
                 tsmiStationRoot.DropDownItems.Add(groupItem);
@@ -397,6 +440,7 @@ namespace Koda_Radio
                 notifIcon.BalloonTipText = "Disable the setting 'Hide On Close' to prevent this from happening.";
                 notifIcon.ShowBalloonTip(500);
                 e.Cancel = true;
+                tsmiChangeState.Text = "Show";
                 Hide();
             }
         }
@@ -404,6 +448,77 @@ namespace Koda_Radio
         private void notifIcon_BalloonTipClicked(object sender, EventArgs e)
         {
             Show();
+        }
+
+        private void lblSong1Title_TextChanged(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrEmpty(lblSong1Title.Text))
+            {
+                lblSong1Timestamp.Text = "Currently playing";
+            }
+        }
+
+        private void MainWindow_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            notifIcon.Visible = false;
+        }
+
+        private void tsmiChangeState_Click(object sender, EventArgs e)
+        {
+            if (tsmiChangeState.Text == "Hide")
+            {
+                tsmiChangeState.Text = "Show";
+                this.Hide();
+            }
+            else
+            {
+                tsmiChangeState.Text = "Hide";
+                this.Show();
+            }
+        }
+
+        private void tmrSongUpdtr_Tick(object sender, EventArgs e)
+        {
+            UpdateSngList();
+        }
+
+        private void UpdateSngList()
+        {
+            if (nowPlayingStation != null)
+                if (nowPlayingStation.FetchName != null)
+                {
+                    HttpWebRequest request = (HttpWebRequest)WebRequest.Create(
+                        nowPlayingGroup.FetchURL+
+                        nowPlayingGroup.FetchQuery.Replace("@station@", nowPlayingStation.FetchName).Replace("\\\"", "%22").Replace(":", "%3A")/*.Replace("{{", "%7B").Replace("}}", "%7D")*/);
+
+                    //request.Headers.Add(HttpRequestHeader.Accept, "application/json")
+                    request.Headers.Add(HttpRequestHeader.AcceptLanguage, "en-US,en;q=0.5");
+                    //request.Headers.Add(HttpRequestHeader.ContentType, "application/json");
+                    request.Headers.Add("x-api-key", "da2-vak2kxayzzh7lgexfqvefckdby");
+                    request.Headers.Add("Sec-Fetch-Dest", "empty");
+                    request.Headers.Add("Sec-Fetch-Mode", "cors");
+                    request.Headers.Add("Sec-Fetch-Site", "cross-site");
+
+                    request.Accept = "*/*";
+                    request.ContentType = "application/json";
+                    request.Method = "GET";
+                    request.Referer = "https://www.radioveronica.nl/"; // Required 
+                    HttpWebResponse response = (HttpWebResponse)request.GetResponse();
+                    if (response.StatusCode == HttpStatusCode.OK)
+                    {
+                        Stream receiveStream = response.GetResponseStream();
+                        StreamReader readStream = null;
+                        if (response.CharacterSet == null)
+                            readStream = new StreamReader(receiveStream);
+                        else
+                            readStream = new StreamReader(receiveStream, Encoding.GetEncoding(response.CharacterSet));
+                        string data = readStream.ReadToEnd();
+                        response.Close();
+                        readStream.Close();
+                        JObject o1 = JObject.Parse(data);
+                        Console.WriteLine(data.ToString());
+                    }
+                }
         }
     }
 }

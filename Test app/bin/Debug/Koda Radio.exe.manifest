@@ -61,19 +61,19 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>4ZfZQlTpHAEQJsKU7Hx4hBt4An7kpesykTC97VSpY3c=</dsig:DigestValue>
+        <dsig:DigestValue>ApXDnFGcf3JwdXRlAkQtCdFuq81uYo0duElMpyHHbTE=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Koda Radio.exe" size="151024">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Koda Radio.exe" size="156656">
       <assemblyIdentity name="Koda Radio" version="0.0.1.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>bghaifwUxgXIpiNh1zCulC19+zG6EpxpXVtdlHXlKXk=</dsig:DigestValue>
+        <dsig:DigestValue>tCb9INfsci4oD7R0YrIKfU5P617CSFbRUKn6KvMyeBA=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
