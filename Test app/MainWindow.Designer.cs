@@ -29,34 +29,34 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.ListViewGroup listViewGroup4 = new System.Windows.Forms.ListViewGroup("Radio 538", System.Windows.Forms.HorizontalAlignment.Left);
-            System.Windows.Forms.ListViewGroup listViewGroup5 = new System.Windows.Forms.ListViewGroup("Radio 2", System.Windows.Forms.HorizontalAlignment.Left);
-            System.Windows.Forms.ListViewGroup listViewGroup6 = new System.Windows.Forms.ListViewGroup("Radio Veronica", System.Windows.Forms.HorizontalAlignment.Left);
-            System.Windows.Forms.ListViewItem listViewItem10 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewGroup listViewGroup1 = new System.Windows.Forms.ListViewGroup("Radio 538", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewGroup listViewGroup2 = new System.Windows.Forms.ListViewGroup("Radio 2", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewGroup listViewGroup3 = new System.Windows.Forms.ListViewGroup("Radio Veronica", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem(new string[] {
             "538",
             "http://playerservices.streamtheworld.com/api/livestream-redirect/RADIO538.mp3"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem11 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem2 = new System.Windows.Forms.ListViewItem(new string[] {
             "538 Dance Dept.",
             "http://playerservices.streamtheworld.com/api/livestream-redirect/TLPSTR01.mp3"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem12 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem3 = new System.Windows.Forms.ListViewItem(new string[] {
             "Sky Radio 101 FM",
             "http://playerservices.streamtheworld.com/api/livestream-redirect/SKYRADIO.mp3"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem13 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem4 = new System.Windows.Forms.ListViewItem(new string[] {
             "NPO Radio 2",
             "https://icecast.omroep.nl/radio2-bb-mp3"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem14 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem5 = new System.Windows.Forms.ListViewItem(new string[] {
             "Radio Veronica",
             "http://playerservices.streamtheworld.com/api/livestream-redirect/VERONICA.mp3"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem15 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem6 = new System.Windows.Forms.ListViewItem(new string[] {
             "Alternative",
             "http://playerservices.streamtheworld.com/api/livestream-redirect/SRGSTR12.mp3"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem16 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem7 = new System.Windows.Forms.ListViewItem(new string[] {
             "Veronica Non-Stop",
             "http://playerservices.streamtheworld.com/api/livestream-redirect/SRGSTR09.mp3"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem17 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem8 = new System.Windows.Forms.ListViewItem(new string[] {
             "Veronica Rock Radio",
             "http://playerservices.streamtheworld.com/api/livestream-redirect/SRGSTR11.mp3"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem18 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem9 = new System.Windows.Forms.ListViewItem(new string[] {
             "Veronica Top 1000 Allertijden",
             "http://playerservices.streamtheworld.com/api/livestream-redirect/SRGSTR10.mp3"}, -1);
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainWindow));
@@ -64,6 +64,7 @@
             this.chName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.chURL = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.chbxShowAlbum = new System.Windows.Forms.CheckBox();
             this.lblDisclaimer = new System.Windows.Forms.Label();
             this.chbxHideOnClose = new System.Windows.Forms.CheckBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
@@ -144,36 +145,36 @@
             this.listView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.listView1.FullRowSelect = true;
             this.listView1.GridLines = true;
-            listViewGroup4.Header = "Radio 538";
-            listViewGroup4.Name = "lvg538";
-            listViewGroup5.Header = "Radio 2";
-            listViewGroup5.Name = "lvgRa2";
-            listViewGroup6.Header = "Radio Veronica";
-            listViewGroup6.Name = "lvgVeronica";
+            listViewGroup1.Header = "Radio 538";
+            listViewGroup1.Name = "lvg538";
+            listViewGroup2.Header = "Radio 2";
+            listViewGroup2.Name = "lvgRa2";
+            listViewGroup3.Header = "Radio Veronica";
+            listViewGroup3.Name = "lvgVeronica";
             this.listView1.Groups.AddRange(new System.Windows.Forms.ListViewGroup[] {
-            listViewGroup4,
-            listViewGroup5,
-            listViewGroup6});
+            listViewGroup1,
+            listViewGroup2,
+            listViewGroup3});
             this.listView1.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
             this.listView1.HideSelection = false;
-            listViewItem10.Group = listViewGroup4;
-            listViewItem11.Group = listViewGroup4;
-            listViewItem13.Group = listViewGroup5;
-            listViewItem14.Group = listViewGroup6;
-            listViewItem15.Group = listViewGroup6;
-            listViewItem16.Group = listViewGroup6;
-            listViewItem17.Group = listViewGroup6;
-            listViewItem18.Group = listViewGroup6;
+            listViewItem1.Group = listViewGroup1;
+            listViewItem2.Group = listViewGroup1;
+            listViewItem4.Group = listViewGroup2;
+            listViewItem5.Group = listViewGroup3;
+            listViewItem6.Group = listViewGroup3;
+            listViewItem7.Group = listViewGroup3;
+            listViewItem8.Group = listViewGroup3;
+            listViewItem9.Group = listViewGroup3;
             this.listView1.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem10,
-            listViewItem11,
-            listViewItem12,
-            listViewItem13,
-            listViewItem14,
-            listViewItem15,
-            listViewItem16,
-            listViewItem17,
-            listViewItem18});
+            listViewItem1,
+            listViewItem2,
+            listViewItem3,
+            listViewItem4,
+            listViewItem5,
+            listViewItem6,
+            listViewItem7,
+            listViewItem8,
+            listViewItem9});
             this.listView1.Location = new System.Drawing.Point(0, 0);
             this.listView1.Margin = new System.Windows.Forms.Padding(2);
             this.listView1.MultiSelect = false;
@@ -203,6 +204,7 @@
             // 
             // splitContainer1.Panel1
             // 
+            this.splitContainer1.Panel1.Controls.Add(this.chbxShowAlbum);
             this.splitContainer1.Panel1.Controls.Add(this.lblDisclaimer);
             this.splitContainer1.Panel1.Controls.Add(this.chbxHideOnClose);
             this.splitContainer1.Panel1.Controls.Add(this.tableLayoutPanel1);
@@ -221,6 +223,17 @@
             this.splitContainer1.SplitterDistance = 376;
             this.splitContainer1.SplitterWidth = 3;
             this.splitContainer1.TabIndex = 2;
+            // 
+            // chbxShowAlbum
+            // 
+            this.chbxShowAlbum.AutoSize = true;
+            this.chbxShowAlbum.Location = new System.Drawing.Point(127, 55);
+            this.chbxShowAlbum.Name = "chbxShowAlbum";
+            this.chbxShowAlbum.Size = new System.Drawing.Size(148, 17);
+            this.chbxShowAlbum.TabIndex = 12;
+            this.chbxShowAlbum.Text = "Show album art if possible";
+            this.chbxShowAlbum.UseVisualStyleBackColor = true;
+            this.chbxShowAlbum.CheckedChanged += new System.EventHandler(this.chbxShowAlbum_CheckedChanged);
             // 
             // lblDisclaimer
             // 
@@ -270,7 +283,7 @@
             this.lblSong2Timestamp.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblSong2Timestamp.Location = new System.Drawing.Point(6, 65);
             this.lblSong2Timestamp.Name = "lblSong2Timestamp";
-            this.lblSong2Timestamp.Size = new System.Drawing.Size(43, 28);
+            this.lblSong2Timestamp.Size = new System.Drawing.Size(40, 28);
             this.lblSong2Timestamp.TabIndex = 5;
             this.lblSong2Timestamp.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
@@ -278,11 +291,12 @@
             // 
             this.lblSong2Title.AutoSize = true;
             this.lblSong2Title.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblSong2Title.Location = new System.Drawing.Point(58, 65);
+            this.lblSong2Title.Location = new System.Drawing.Point(55, 65);
             this.lblSong2Title.Name = "lblSong2Title";
-            this.lblSong2Title.Size = new System.Drawing.Size(306, 28);
+            this.lblSong2Title.Size = new System.Drawing.Size(309, 28);
             this.lblSong2Title.TabIndex = 4;
             this.lblSong2Title.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblSong2Title.TextChanged += new System.EventHandler(this.lblSongTitle_TextChanged);
             // 
             // lblStationTitleRO
             // 
@@ -290,9 +304,9 @@
             this.lblStationTitleRO.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblStationTitleRO.Location = new System.Drawing.Point(6, 3);
             this.lblStationTitleRO.Name = "lblStationTitleRO";
-            this.lblStationTitleRO.Size = new System.Drawing.Size(43, 28);
+            this.lblStationTitleRO.Size = new System.Drawing.Size(40, 28);
             this.lblStationTitleRO.TabIndex = 0;
-            this.lblStationTitleRO.Text = "Station:";
+            this.lblStationTitleRO.Text = "Station";
             this.lblStationTitleRO.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // lblSong1Timestamp
@@ -301,7 +315,7 @@
             this.lblSong1Timestamp.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblSong1Timestamp.Location = new System.Drawing.Point(6, 34);
             this.lblSong1Timestamp.Name = "lblSong1Timestamp";
-            this.lblSong1Timestamp.Size = new System.Drawing.Size(43, 28);
+            this.lblSong1Timestamp.Size = new System.Drawing.Size(40, 28);
             this.lblSong1Timestamp.TabIndex = 1;
             this.lblSong1Timestamp.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
@@ -309,9 +323,9 @@
             // 
             this.lblStationTitle.AutoSize = true;
             this.lblStationTitle.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblStationTitle.Location = new System.Drawing.Point(58, 3);
+            this.lblStationTitle.Location = new System.Drawing.Point(55, 3);
             this.lblStationTitle.Name = "lblStationTitle";
-            this.lblStationTitle.Size = new System.Drawing.Size(306, 28);
+            this.lblStationTitle.Size = new System.Drawing.Size(309, 28);
             this.lblStationTitle.TabIndex = 2;
             this.lblStationTitle.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
@@ -319,9 +333,9 @@
             // 
             this.lblSong1Title.AutoSize = true;
             this.lblSong1Title.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblSong1Title.Location = new System.Drawing.Point(58, 34);
+            this.lblSong1Title.Location = new System.Drawing.Point(55, 34);
             this.lblSong1Title.Name = "lblSong1Title";
-            this.lblSong1Title.Size = new System.Drawing.Size(306, 28);
+            this.lblSong1Title.Size = new System.Drawing.Size(309, 28);
             this.lblSong1Title.TabIndex = 3;
             this.lblSong1Title.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.lblSong1Title.TextChanged += new System.EventHandler(this.lblSong1Title_TextChanged);
@@ -745,7 +759,7 @@
             // tmrSongUpdtr
             // 
             this.tmrSongUpdtr.Enabled = true;
-            this.tmrSongUpdtr.Interval = 5000;
+            this.tmrSongUpdtr.Interval = 30000;
             this.tmrSongUpdtr.Tick += new System.EventHandler(this.tmrSongUpdtr_Tick);
             // 
             // MainWindow
@@ -842,6 +856,7 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.ToolStripMenuItem tsmiChangeState;
         private System.Windows.Forms.Timer tmrSongUpdtr;
+        private System.Windows.Forms.CheckBox chbxShowAlbum;
     }
 }
 

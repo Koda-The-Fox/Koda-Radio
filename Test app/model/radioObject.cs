@@ -15,6 +15,7 @@ namespace Koda_Radio.model
         private string _url;
         private string _group;
         private string _fetchName;
+        
 
         public string Name { get { return _name; } set { _name = value; } }  
         public string Url { get { return _url; } set { _url = value; } }

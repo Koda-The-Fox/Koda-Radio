@@ -301,10 +301,38 @@ namespace Koda_Radio.util
         }
 
 
+        public static KeyValuePair<string, object> JsonRecursion(string json)
+        {
+            try
+            {
+                JObject jo = JObject.Parse(json);
+                foreach (KeyValuePair<string, JToken> child in jo)
+                {
+                    return new KeyValuePair<string, object>(child.Key, JsonRecursion(child.Key.ToString(), child.Value.ToString()));
+                }
+            }
+            catch (Exception ex) { throw ex; }
+            return new KeyValuePair<string, object>();
+        }
+        public static KeyValuePair<string, object> JsonRecursion(string key, string value)
+        {
+            try
+            {
+                JObject jo = JObject.Parse(value);
+                foreach (KeyValuePair<string, JToken> child in jo)
+                {
+                    return new KeyValuePair<string, object>(child.Key, JsonRecursion(child.Key.ToString(), child.Value.ToString()));
+                }
+
+            } catch {}
+
+            return new KeyValuePair<string, object>(key, value);
+        }
+
 
         /*
          * Sources:
-         * https://www.newtonsoft.com/json/help/html/ReadJson.htm // read data from Json file
+         * https://www.newtonsoft.com/json/help/html/ReadJson.htm // read data from JsonRoot file
          * https://stackoverflow.com/questions/3314140/how-to-read-embedded-resource-text-file // read from embedded file.
          */
 

@@ -175,6 +175,9 @@ namespace Koda_Radio
             nowPlayingGroup = null;
             nowPlayingStation = null;
 
+            pictureBox1.Visible = false;
+            pictureBox1.ImageLocation = "";
+
             ListViewItem lvi = null;
             if (target == null)
                 lvi = sender as ListViewItem;
@@ -224,7 +227,7 @@ namespace Koda_Radio
                 }
             }
 
-            //nowPlaying = playingResult;
+            UpdateSngList();
 
             this.Text = $"Playing: {lvi.Text}";
 
@@ -450,13 +453,6 @@ namespace Koda_Radio
             Show();
         }
 
-        private void lblSong1Title_TextChanged(object sender, EventArgs e)
-        {
-            if (!string.IsNullOrEmpty(lblSong1Title.Text))
-            {
-                lblSong1Timestamp.Text = "Currently playing";
-            }
-        }
 
         private void MainWindow_FormClosed(object sender, FormClosedEventArgs e)
         {
@@ -515,10 +511,135 @@ namespace Koda_Radio
                         string data = readStream.ReadToEnd();
                         response.Close();
                         readStream.Close();
+
+                        // TODO: Find a proper way to travel trough the/a Json.
+
+                        JToken t1 = JToken.Parse(data);
                         JObject o1 = JObject.Parse(data);
-                        Console.WriteLine(data.ToString());
+
+                        dynamic dynJson = JsonConvert.DeserializeObject(data);
+                        JToken songList = null;
+                        try
+                        {
+                            songList = dynJson["data"]["getStation"]["playouts"];
+                        }
+                        catch { }
+                        if (songList != null)
+                        {
+                            IEnumerable<JToken> list = songList.Children();
+                            try
+                            {
+                                JToken song = list.First();
+                                try
+                                {
+                                    //lblSong1Timestamp.Text = DateTime.Parse(song["broadcastDate"].ToString()).ToString("HH:mm:ss");
+                                }
+                                catch { }
+                                try
+                                {
+                                    lblSong1Title.Text = song["track"]["artistName"].ToString() + " - " + song["track"]["title"].ToString();
+                                }
+                                catch { lblSong1Title.Text = ""; }
+                                try
+                                {
+                                    JToken images = song["track"]["images"].First;
+                                    if (images != null)
+                                    {
+                                        pictureBox1.ImageLocation = images["uri"].ToString();
+                                        pictureBox1.Visible = chbxShowAlbum.Checked;
+                                    }
+                                }
+                                catch
+                                {
+                                    pictureBox1.Visible = false;
+                                    pictureBox1.ImageLocation = "";
+                                }
+                            }
+                            catch { }
+                            try
+                            {
+                                JToken song = list.Skip(1).First();// second song
+                                try
+                                {
+                                    lblSong2Timestamp.Text = DateTime.Parse(song["broadcastDate"].ToString()).ToString("HH:mm:ss");
+                                }
+                                catch { }
+                                try
+                                {
+                                    lblSong2Title.Text = song["track"]["artistName"].ToString() + " - " + song["track"]["title"].ToString();
+                                }
+                                catch { lblSong2Title.Text = ""; }
+                                try
+                                {
+                                    JToken images = song["track"]["images"].First;
+                                    if (images != null)
+                                    {
+                                        pictureBox1.ImageLocation = images["uri"].ToString();
+                                        pictureBox1.Visible = chbxShowAlbum.Checked;
+                                        toolTip1.SetToolTip(pictureBox1, pictureBox1.ImageLocation);
+                                    }
+                                }
+                                catch
+                                {
+                                    pictureBox1.Visible = false;
+                                    pictureBox1.ImageLocation = "";
+                                    toolTip1.SetToolTip(pictureBox1, pictureBox1.ImageLocation);
+                                }
+                            }
+                            catch { }
+                            /*
+                            foreach (JToken song in list)
+                            {
+                                Console.WriteLine(song);
+                                try
+                                {
+                                    lblSong1Timestamp.Text = DateTime.Parse(song["broadcastDate"].ToString()).ToString("HH:mm:ss");
+                                } catch { }
+                                try
+                                {
+                                    lblSong1Title.Text = song["track"]["artistName"].ToString() + " - " + song["track"]["title"].ToString();
+                                } catch { }
+                                try
+                                {
+                                    pictureBox1.ImageLocation = song["track"]["images"]["uri"].ToString();
+                                    pictureBox1.Visible = true;
+                                } catch
+                                {
+                                    pictureBox1.Visible = false;
+                                    pictureBox1.ImageLocation = "";
+                                }
+                            }
+                            */
+
+                        }
+
+
+                        Console.WriteLine(data);
                     }
                 }
+        }
+
+        private void chbxShowAlbum_CheckedChanged(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrEmpty(pictureBox1.ImageLocation))
+                pictureBox1.Visible = chbxShowAlbum.Checked;
+        }
+
+
+        private void lblSong1Title_TextChanged(object sender, EventArgs e)
+        {
+            Label lbl = sender as Label;
+            if (!string.IsNullOrEmpty(lblSong1Title.Text))
+            {
+                lblSong1Timestamp.Text = "Currently playing";
+            }
+            toolTip1.SetToolTip(lbl, lbl.Text);
+        }
+
+        private void lblSongTitle_TextChanged(object sender, EventArgs e)
+        {
+            Label lbl = sender as Label;
+            toolTip1.SetToolTip(lbl, lbl.Text);
         }
     }
 }
