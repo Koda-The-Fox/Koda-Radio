@@ -15,92 +15,86 @@
     {
         "Entry"
         {
+        "MsmKey" = "8:_0315BA3C1E7877E0EE473AD770602AF0"
+        "OwnerKey" = "8:_8F388CE73CF598A59F4CD65A5AC0ED07"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_0315BA3C1E7877E0EE473AD770602AF0"
+        "OwnerKey" = "8:_0A0C96ABE1E9437AA54476A019777CA6"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_0A0C96ABE1E9437AA54476A019777CA6"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_156FEB4E174A3B11FEAA6C22BEE96E32"
-        "OwnerKey" = "8:_29A73E326FE746DE9A14A1017C5F9F84"
+        "OwnerKey" = "8:_0A0C96ABE1E9437AA54476A019777CA6"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_29A73E326FE746DE9A14A1017C5F9F84"
+        "MsmKey" = "8:_58292785F961E9276472E8973EB39784"
+        "OwnerKey" = "8:_0A0C96ABE1E9437AA54476A019777CA6"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_885E072B9C084C23B4A84E0655ACFF7A"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_70347DF239EF0D5CA614BC866A8D3CFD"
-        "OwnerKey" = "8:_29A73E326FE746DE9A14A1017C5F9F84"
+        "MsmKey" = "8:_8F388CE73CF598A59F4CD65A5AC0ED07"
+        "OwnerKey" = "8:_0A0C96ABE1E9437AA54476A019777CA6"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_A65CA35077C64512BD87D8359F5827E6"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_C59F83F1E6B691559FFE40E1247DD1B5"
-        "OwnerKey" = "8:_70347DF239EF0D5CA614BC866A8D3CFD"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_C59F83F1E6B691559FFE40E1247DD1B5"
-        "OwnerKey" = "8:_29A73E326FE746DE9A14A1017C5F9F84"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_CB5B84AE70262D6639A5D90634E4D9C9"
-        "OwnerKey" = "8:_29A73E326FE746DE9A14A1017C5F9F84"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_CBA35039D79F483398C0D80AAEF331F1"
+        "MsmKey" = "8:_B55E6E755EA14E51A3C6BF0CE26F7FEE"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_CEEFEAFB3FA232A91306C5F8B8A12186"
-        "OwnerKey" = "8:_C59F83F1E6B691559FFE40E1247DD1B5"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_DECA3071C9054F6D92D2DB280C6D28AE"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_29A73E326FE746DE9A14A1017C5F9F84"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_70347DF239EF0D5CA614BC866A8D3CFD"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_C59F83F1E6B691559FFE40E1247DD1B5"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_CB5B84AE70262D6639A5D90634E4D9C9"
+        "OwnerKey" = "8:_0315BA3C1E7877E0EE473AD770602AF0"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_156FEB4E174A3B11FEAA6C22BEE96E32"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_0A0C96ABE1E9437AA54476A019777CA6"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_8F388CE73CF598A59F4CD65A5AC0ED07"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_0315BA3C1E7877E0EE473AD770602AF0"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_58292785F961E9276472E8973EB39784"
         "MsmSig" = "8:_UNDEFINED"
         }
     }
@@ -198,6 +192,37 @@
         }
         "File"
         {
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_0315BA3C1E7877E0EE473AD770602AF0"
+            {
+            "AssemblyRegister" = "3:1"
+            "AssemblyIsInGAC" = "11:FALSE"
+            "AssemblyAsmDisplayName" = "8:Interop.WMPLib, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL"
+                "ScatterAssemblies"
+                {
+                    "_0315BA3C1E7877E0EE473AD770602AF0"
+                    {
+                    "Name" = "8:Interop.WMPLib.dll"
+                    "Attributes" = "3:512"
+                    }
+                }
+            "SourcePath" = "8:Interop.WMPLib.dll"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_AA8470CEB1F041DDB769D3A5064181CA"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_156FEB4E174A3B11FEAA6C22BEE96E32"
             {
             "AssemblyRegister" = "3:1"
@@ -229,96 +254,14 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_70347DF239EF0D5CA614BC866A8D3CFD"
-            {
-            "AssemblyRegister" = "3:1"
-            "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:AxInterop.WMPLib, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL"
-                "ScatterAssemblies"
-                {
-                    "_70347DF239EF0D5CA614BC866A8D3CFD"
-                    {
-                    "Name" = "8:AxInterop.WMPLib.dll"
-                    "Attributes" = "3:512"
-                    }
-                }
-            "SourcePath" = "8:AxInterop.WMPLib.dll"
-            "TargetName" = "8:"
-            "Tag" = "8:"
-            "Folder" = "8:_AA8470CEB1F041DDB769D3A5064181CA"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:TRUE"
-            "IsolateTo" = "8:"
-            }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_A65CA35077C64512BD87D8359F5827E6"
-            {
-            "SourcePath" = "8:..\\..\\..\\..\\OneDrive - Avans Hogeschool\\AAAd Informatica 2020\\SEMESTER 4\\Blok 7,8 - afstuderen\\Stage\\Actemium\\Beroepsproducten\\2a - Interface-ontwerp\\Images\\favicon.ico"
-            "TargetName" = "8:favicon.ico"
-            "Tag" = "8:"
-            "Folder" = "8:_985B8ACD7EEB4856A882D364E4A5C578"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_C59F83F1E6B691559FFE40E1247DD1B5"
-            {
-            "AssemblyRegister" = "3:1"
-            "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:Interop.WMPLib, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL"
-                "ScatterAssemblies"
-                {
-                    "_C59F83F1E6B691559FFE40E1247DD1B5"
-                    {
-                    "Name" = "8:Interop.WMPLib.dll"
-                    "Attributes" = "3:512"
-                    }
-                }
-            "SourcePath" = "8:Interop.WMPLib.dll"
-            "TargetName" = "8:"
-            "Tag" = "8:"
-            "Folder" = "8:_AA8470CEB1F041DDB769D3A5064181CA"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:TRUE"
-            "IsolateTo" = "8:"
-            }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_CB5B84AE70262D6639A5D90634E4D9C9"
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_58292785F961E9276472E8973EB39784"
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
             "AssemblyAsmDisplayName" = "8:Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_CB5B84AE70262D6639A5D90634E4D9C9"
+                    "_58292785F961E9276472E8973EB39784"
                     {
                     "Name" = "8:Newtonsoft.Json.dll"
                     "Attributes" = "3:512"
@@ -342,7 +285,58 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_CBA35039D79F483398C0D80AAEF331F1"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_885E072B9C084C23B4A84E0655ACFF7A"
+            {
+            "SourcePath" = "8:..\\Test app\\documents\\RadioList.json"
+            "TargetName" = "8:RadioList.json"
+            "Tag" = "8:"
+            "Folder" = "8:_4D93817068D84A17BDB59D4ACE25D451"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_8F388CE73CF598A59F4CD65A5AC0ED07"
+            {
+            "AssemblyRegister" = "3:1"
+            "AssemblyIsInGAC" = "11:FALSE"
+            "AssemblyAsmDisplayName" = "8:AxInterop.WMPLib, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL"
+                "ScatterAssemblies"
+                {
+                    "_8F388CE73CF598A59F4CD65A5AC0ED07"
+                    {
+                    "Name" = "8:AxInterop.WMPLib.dll"
+                    "Attributes" = "3:512"
+                    }
+                }
+            "SourcePath" = "8:AxInterop.WMPLib.dll"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_AA8470CEB1F041DDB769D3A5064181CA"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_B55E6E755EA14E51A3C6BF0CE26F7FEE"
             {
             "SourcePath" = "8:..\\Test app\\documents\\RadioList.json"
             "TargetName" = "8:RadioList.json"
@@ -382,26 +376,6 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_DECA3071C9054F6D92D2DB280C6D28AE"
-            {
-            "SourcePath" = "8:..\\Test app\\documents\\RadioList.json"
-            "TargetName" = "8:RadioList.json"
-            "Tag" = "8:"
-            "Folder" = "8:_4D93817068D84A17BDB59D4ACE25D451"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:TRUE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
         }
         "FileType"
         {
@@ -434,7 +408,7 @@
             "{994432C3-9487-495D-8656-3E829A8DBDDE}:_AA8470CEB1F041DDB769D3A5064181CA"
             {
             "DefaultLocation" = "8:[ProgramFilesFolder]\\Actemium\\[ProductName]"
-            "Name" = "8:Actemium Internet Raido"
+            "Name" = "8:Koda Radio"
             "AlwaysCreate" = "11:TRUE"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
@@ -624,32 +598,32 @@
         }
         "Shortcut"
         {
-            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_0C7F95AB6EAE413DAA607C3978AEA2AE"
+            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_0F729160FC42438BA0D8A5B0019F3A43"
             {
-            "Name" = "8:Radio"
+            "Name" = "8:Koda Radio"
             "Arguments" = "8:"
             "Description" = "8:"
             "ShowCmd" = "3:1"
             "IconIndex" = "3:0"
             "Transitive" = "11:FALSE"
-            "Target" = "8:_29A73E326FE746DE9A14A1017C5F9F84"
+            "Target" = "8:_0A0C96ABE1E9437AA54476A019777CA6"
             "Folder" = "8:_61404BDEC8B64DB2AA9966DE019CF0B5"
             "WorkingFolder" = "8:_AA8470CEB1F041DDB769D3A5064181CA"
-            "Icon" = "8:_A65CA35077C64512BD87D8359F5827E6"
+            "Icon" = "8:"
             "Feature" = "8:"
             }
-            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_27720696ABFB46EE8CA0E5050E2A9E27"
+            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_4E19DBBAE5264DCDA5D23D2BD2ED2047"
             {
-            "Name" = "8:Radio"
+            "Name" = "8:Shortcut to Primary output from Koda Radio (Active)"
             "Arguments" = "8:"
             "Description" = "8:"
             "ShowCmd" = "3:1"
             "IconIndex" = "3:0"
             "Transitive" = "11:FALSE"
-            "Target" = "8:_29A73E326FE746DE9A14A1017C5F9F84"
+            "Target" = "8:_0A0C96ABE1E9437AA54476A019777CA6"
             "Folder" = "8:_DCE816F154014F3180A5594134671D84"
             "WorkingFolder" = "8:_AA8470CEB1F041DDB769D3A5064181CA"
-            "Icon" = "8:_A65CA35077C64512BD87D8359F5827E6"
+            "Icon" = "8:"
             "Feature" = "8:"
             }
         }
@@ -1051,9 +1025,9 @@
         }
         "ProjectOutput"
         {
-            "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_29A73E326FE746DE9A14A1017C5F9F84"
+            "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_0A0C96ABE1E9437AA54476A019777CA6"
             {
-            "SourcePath" = "8:..\\Test app\\obj\\Debug\\Test app.exe"
+            "SourcePath" = "8:..\\Test app\\obj\\Debug\\Koda Radio.exe"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_AA8470CEB1F041DDB769D3A5064181CA"
